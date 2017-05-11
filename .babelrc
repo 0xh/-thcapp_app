@@ -1,0 +1,40 @@
+{
+  "presets": [
+    "stage-0",
+    "es2015",
+    "react"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "latest",
+        "react-hmre"
+      ],
+      "plugins": [
+        "transform-class-properties",
+		"transform-decorators-legacy"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["latest", {
+          "es2015": {
+            "modules": false
+          }
+        }]
+      ],
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types",
+        "transform-class-properties",
+		"transform-decorators-legacy"
+      ]
+    },
+    "test": {
+      "presets": [
+        "latest"
+      ]
+    }
+  }
+}
+
